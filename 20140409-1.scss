@@ -259,6 +259,15 @@ main {
         }
     }
 
+    section.backImage2 {
+        min-height: 90vh;
+        width: 100%;
+        // background-image: url(./Pictures/login-01.avif);
+        background-image: linear-gradient(180deg, rgba(240, 223, 248, 0.4), rgba(0, 0, 0, 0.3)), url(./Pictures/login-01.avif);
+        background-position: center center;
+        background-size: cover;
+    }
+
     section.second {
         min-height: 100vh;
 
@@ -306,7 +315,7 @@ main {
                         border-radius: 50%;
                         transition: all 0.5s;
 
-                        &:hover{
+                        &:hover {
                             transform: scale(1.2);
                         }
                     }
@@ -338,26 +347,27 @@ main {
             }
         }
     }
-    
-    .container{
-        .timeline-section::before{
+
+    .container {
+        .timeline-section::before {
             position: absolute;
             content: "";
             top: 5px;
             bottom: 5px;
             width: 15px;
             background-color: lightblue;
-            left:50%;
+            left: 50%;
             transform: translateX(-50%);
         }
 
-        .timeline-section{
+        .timeline-section {
             position: relative;
 
-            .timeline-section-pointer{
+            .timeline-section-pointer {
                 position: relative;
             }
-            .timeline-section-pointer::before{
+
+            .timeline-section-pointer::before {
                 position: absolute;
                 content: "";
                 top: 0;
@@ -369,9 +379,10 @@ main {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            .timeline-section-pointer:hover::before{
-                background-color: black;
-                border: 5px solid yellow;
+
+            .timeline-section-pointer:hover::before {
+                background-color: lightblue;
+                border: 5px solid lightpink;
             }
 
 
@@ -382,48 +393,111 @@ main {
                 margin-left: 2rem;
             }
 
-            .row{
-                margin-top:2rem;
+            .row {
+                margin-top: 2rem;
                 display: flex;
 
-                .col-md-6{     
+                .col-md-6 {
                     text-align: center;
-                          
-                    flex: 0 0 auto;
-                    width: 50%; 
 
-                    .mytext{
+                    flex: 0 0 auto;
+                    width: 50%;
+
+                    .mytext {
                         margin-bottom: 3rem;
 
-                        .h3{
+                        .h3 {
                             font-weight: 800;
                             font-size: 2rem;
                             color: brown;
-                            
-                            .little{
-                            font-weight: 800;
-                            font-size: 1.5rem;
-                            color: gray;
+
+                            .little {
+                                font-weight: 800;
+                                font-size: 1.5rem;
+                                color: gray;
                             }
                         }
-                     
-                        p{
+
+                        p {
                             font-size: 1.25rem;
                             line-height: 1.5rem;
                         }
-                        ul li{
+
+                        ul li {
                             font-size: 1rem;
                             color: gray;
+                            line-height: 1.5rem;
                         }
-                    }  
-                    
-                    
+                    }
+
+
                 }
             }
-            .row2{
+
+            .row2 {
                 flex-direction: row-reverse;
             }
         }
+    }
+
+
+    form {
+        height: 520px;
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+
+        h3{
+            color: pink;
+            font-size: 50px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        label{
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        input{
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255,255,255,0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        button{
+            margin-top: 50px;
+            width: 100%;
+            background-color: lightpink;
+            color: white;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: white;
+                color: lightpink;
+            }
+        }
+
     }
 
 }
@@ -572,29 +646,29 @@ footer {
             }
         }
 
-        .container{
-            .timeline-section::before{
-                display: none;             
+        .container {
+            .timeline-section::before {
+                display: none;
             }
-            .timeline-section-pointer::before{
-                display:none;
+
+            .timeline-section-pointer::before {
+                display: none;
             }
         }
     }
-    
+
 
 }
 
-@media(min-width:768px){
-    .container{
-        .timeline-section{
-            .row{
-                    .col-md-6 {
-                        flex: 0 0 auto;
-                        width: 50%;  
+@media(min-width:768px) {
+    .container {
+        .timeline-section {
+            .row {
+                .col-md-6 {
+                    flex: 0 0 auto;
+                    width: 50%;
                 }
             }
         }
     }
 }
-

@@ -225,6 +225,13 @@ main section.backImage button.start {
   border-radius: 1rem;
   cursor: pointer;
 }
+main section.backImage2 {
+  min-height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(240, 223, 248, 0.4), rgba(0, 0, 0, 0.3)), url(./Pictures/login-01.avif);
+  background-position: center center;
+  background-size: cover;
+}
 main section.second {
   min-height: 100vh;
   display: flex;
@@ -310,8 +317,8 @@ main .container .timeline-section .timeline-section-pointer::before {
   transform: translateX(-50%);
 }
 main .container .timeline-section .timeline-section-pointer:hover::before {
-  background-color: black;
-  border: 5px solid yellow;
+  background-color: lightblue;
+  border: 5px solid lightpink;
 }
 main .container .timeline-section .bg-cover {
   background-position: center center;
@@ -348,9 +355,63 @@ main .container .timeline-section .row .col-md-6 .mytext p {
 main .container .timeline-section .row .col-md-6 .mytext ul li {
   font-size: 1rem;
   color: gray;
+  line-height: 1.5rem;
 }
 main .container .timeline-section .row2 {
   flex-direction: row-reverse;
+}
+main form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+main form h3 {
+  color: pink;
+  font-size: 50px;
+  text-align: center;
+  padding: 30px;
+}
+main form label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+main form input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+main form button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: lightpink;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main form button:hover {
+  background-color: white;
+  color: lightpink;
 }
 
 footer {
