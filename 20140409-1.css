@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  /* google字形 */
+  font-family: "Noto Sans TC", sans-serif;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 以上是 CSS reset的部分。把格式都清掉，以方便做我們想要做的格式。 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  background-color: white;
+  box-shadow: 3px 3px 5px 1px #757474;
+}
+header div.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  margin-left: 2rem;
+}
+header div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+header div.logo h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+header nav {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  padding: 0.5rem;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+
+main section.backImage {
+  min-height: 90vh;
+  width: 100%;
+  background-image: url(./Pictures/yama-view-01.avif);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main section.backImage div.fliter {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main section.backImage h3 {
+  font-size: 3.5rem;
+  color: white;
+  margin: 2rem 0rem;
+  line-height: 5rem;
+}
+main section.backImage button.start {
+  background-color: #3bf0e5;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+main section.second {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main section.second h2 {
+  font-size: 2rem;
+  margin: 2rem 0rem;
+}
+main section.second section.cards {
+  display: flex;
+  width: 80%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+main section.second section.cards div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main section.second section.cards div.card div.image-container {
+  overflow: hidden;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+main section.second section.cards div.card div.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+main section.second section.cards div.card div.image-container img:hover {
+  transform: scale(1.2);
+}
+main section.second section.cards div.card h4 {
+  font-size: 2rem;
+  margin: 1rem 0rem;
+}
+main section.second section.cards div.card p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+main section.second section.cards div.card a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #09777d;
+  color: white;
+  font-size: 1.25rem;
+  margin: 1rem 0rem;
+}
+main .container .timeline-section::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  bottom: 5px;
+  width: 15px;
+  background-color: lightblue;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .container .timeline-section {
+  position: relative;
+}
+main .container .timeline-section .timeline-section-pointer {
+  position: relative;
+}
+main .container .timeline-section .timeline-section-pointer::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .container .timeline-section .timeline-section-pointer:hover::before {
+  background-color: black;
+  border: 5px solid yellow;
+}
+main .container .timeline-section .bg-cover {
+  background-position: center center;
+  background-size: cover;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+main .container .timeline-section .row {
+  margin-top: 2rem;
+  display: flex;
+}
+main .container .timeline-section .row .col-md-6 {
+  text-align: center;
+  flex: 0 0 auto;
+  width: 50%;
+}
+main .container .timeline-section .row .col-md-6 .mytext {
+  margin-bottom: 3rem;
+}
+main .container .timeline-section .row .col-md-6 .mytext .h3 {
+  font-weight: 800;
+  font-size: 2rem;
+  color: brown;
+}
+main .container .timeline-section .row .col-md-6 .mytext .h3 .little {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: gray;
+}
+main .container .timeline-section .row .col-md-6 .mytext p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+main .container .timeline-section .row .col-md-6 .mytext ul li {
+  font-size: 1rem;
+  color: gray;
+}
+main .container .timeline-section .row2 {
+  flex-direction: row-reverse;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  justify-content: space-around;
+  background-color: rgb(207, 207, 207);
+}
+footer a {
+  color: white;
+  font-weight: 600;
+  margin: 0rem 0.5rem;
+}
+footer div.logo {
+  display: flex;
+  align-items: center;
+}
+footer div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+footer div.logo h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+footer nav {
+  width: 30%;
+}
+footer nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.35rem;
+  flex-basis: 100px;
+}
+footer section.links a {
+  margin: 0rem 1rem;
+}
+footer section.links a img {
+  width: 5vw;
+  height: 5vw;
+  margin: 0rem 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #09777d;
+}
+
+@media screen and (max-width: 550px) {
+  header div.logo {
+    margin-left: 0.5rem;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  footer section.link {
+    margin-top: 1rem;
+  }
+  footer section.link a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  main section.second section.cards div.card div.image-container {
+    width: 40vw;
+    height: 40vw;
+  }
+  main section.second section.cards div.card div.image-container img {
+    width: 40vw;
+    height: 40vw;
+  }
+  main .container .timeline-section::before {
+    display: none;
+  }
+  main .container .timeline-section-pointer::before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .container .timeline-section .row .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}/*# sourceMappingURL=20140409-1.css.map */

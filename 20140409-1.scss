@@ -1,0 +1,600 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    /* google字形 */
+    font-family: "Noto Sans TC", sans-serif;
+    box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 以上是 CSS reset的部分。把格式都清掉，以方便做我們想要做的格式。 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+// h1,h2,h3,h4,h5,h6{
+//     font-weight: normal;
+// }
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // 鎖定標題列 sticky要給他位置固定哪裡->top 0
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color: white;
+    box-shadow: 3px 3px 5px 1px #757474;
+    // shadow:水平偏移量 垂直偏移量 模糊半徑 擴散半徑
+
+
+    div.logo {
+        display: flex;
+        align-items: center;
+        // flex: 5 1 400px; 下面是完整版
+        flex-grow: 5;
+        flex-shrink: 1;
+        flex-basis: 400px;
+        margin-left: 2rem;
+
+        img {
+            width: 6vw;
+            height: 6vw;
+        }
+
+        h1 {
+            font-weight: 900;
+            font-size: 2rem;
+        }
+    }
+
+    nav {
+        // flex: 2 1 400px; 空格 寬度:1首頁2關於我們2會員登入2聯絡我們1
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: 400px;
+        padding: 0.5rem;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+
+            // 要有寬度才會分散排列
+            li {
+                a {
+                    color: #09777d;
+                    text-decoration: none;
+                    font-size: 1.35rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+main {
+    section.backImage {
+        min-height: 90vh;
+        width: 100%;
+        background-image: url(./Pictures/yama-view-01.avif);
+        background-position: center center;
+        background-size: cover;
+
+        position: relative;
+        z-index: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        div.fliter {
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            min-height: 90vh;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+        // z-index會調整顯示順序 而bgi會在最後面
+
+        h3 {
+            font-size: 3.5rem;
+            color: white;
+            margin: 2rem 0rem;
+            line-height: 5rem;
+        }
+
+        button.start {
+            background-color: #3bf0e5;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    section.second {
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0rem;
+        }
+
+        section.cards {
+            display: flex;
+            // border: 2px solid red;
+            width: 80%;
+
+            // 維持最小高度 當初height:80vh是固定高度
+            min-height: 80vh;
+            flex-wrap: wrap;
+
+            div.card {
+                // border: 2px solid blue;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding: 1rem;
+                flex: 1 1 300px;
+
+                // scale image affect - 圖片特效
+                div.image-container {
+                    overflow: hidden;
+                    width: 15vw;
+                    height: 15vw;
+                    border-radius: 50%;
+                    // border: 1px solid red;
+
+
+                    img {
+                        // margin: 1rem 0rem;
+                        width: 15vw;
+                        height: 15vw;
+                        border-radius: 50%;
+                        transition: all 0.5s;
+
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+
+
+                h4 {
+                    font-size: 2rem;
+                    // padding: 0.5rem;
+                    margin: 1rem 0rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    line-height: 1.5rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    padding: 1rem 1.5rem;
+                    background-color: #09777d;
+                    color: white;
+                    font-size: 1.25rem;
+
+                    // margin-top: 0.5rem;
+                    margin: 1rem 0rem;
+                }
+            }
+        }
+    }
+    
+    .container{
+        .timeline-section::before{
+            position: absolute;
+            content: "";
+            top: 5px;
+            bottom: 5px;
+            width: 15px;
+            background-color: lightblue;
+            left:50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-section{
+            position: relative;
+
+            .timeline-section-pointer{
+                position: relative;
+            }
+            .timeline-section-pointer::before{
+                position: absolute;
+                content: "";
+                top: 0;
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border: 5px solid black;
+                border-radius: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .timeline-section-pointer:hover::before{
+                background-color: black;
+                border: 5px solid yellow;
+            }
+
+
+            .bg-cover {
+                background-position: center center;
+                background-size: cover;
+                margin-right: 2rem;
+                margin-left: 2rem;
+            }
+
+            .row{
+                margin-top:2rem;
+                display: flex;
+
+                .col-md-6{     
+                    text-align: center;
+                          
+                    flex: 0 0 auto;
+                    width: 50%; 
+
+                    .mytext{
+                        margin-bottom: 3rem;
+
+                        .h3{
+                            font-weight: 800;
+                            font-size: 2rem;
+                            color: brown;
+                            
+                            .little{
+                            font-weight: 800;
+                            font-size: 1.5rem;
+                            color: gray;
+                            }
+                        }
+                     
+                        p{
+                            font-size: 1.25rem;
+                            line-height: 1.5rem;
+                        }
+                        ul li{
+                            font-size: 1rem;
+                            color: gray;
+                        }
+                    }  
+                    
+                    
+                }
+            }
+            .row2{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    justify-content: space-around;
+    background-color: rgb(207, 207, 207);
+
+    a {
+        color: white;
+        font-weight: 600;
+
+        margin: 0rem 0.5rem;
+    }
+
+
+
+    div.logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 6vw;
+            height: 6vw;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    }
+
+    nav {
+        width: 30%;
+
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            width: 100%;
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+
+            li {
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.35rem;
+
+                    // 每一塊的寬度
+                    flex-basis: 100px;
+                }
+            }
+        }
+    }
+
+    section.links {
+        a {
+            img {
+                width: 5vw;
+                height: 5vw;
+                margin: 0rem 1rem;
+            }
+
+            margin:0rem 1rem;
+        }
+    }
+}
+
+// scrollbar
+// width
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+// track
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+    background: #09777d;
+}
+
+
+@media screen and (max-width:550px) {
+    header {
+        div.logo {
+            margin-left: 0.5rem;
+
+            img {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    }
+
+    footer {
+        div.logo {
+            img {
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+
+        section.link {
+            margin-top: 1rem;
+
+            a {
+                img {
+                    width: 10vw;
+                    height: 10vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    main {
+        section.second {
+            section.cards {
+                div.card {
+                    div.image-container {
+
+                        width: 40vw;
+                        height: 40vw;
+
+                        img {
+                            width: 40vw;
+                            height: 40vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container{
+            .timeline-section::before{
+                display: none;             
+            }
+            .timeline-section-pointer::before{
+                display:none;
+            }
+        }
+    }
+    
+
+}
+
+@media(min-width:768px){
+    .container{
+        .timeline-section{
+            .row{
+                    .col-md-6 {
+                        flex: 0 0 auto;
+                        width: 50%;  
+                }
+            }
+        }
+    }
+}
+
