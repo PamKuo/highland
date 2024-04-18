@@ -524,7 +524,10 @@ main {
             height: 30%;
             padding: 15px;
             background: transparent;
-            border: solid 1px #b3aca7;
+            border: solid 2px black;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: 300;
           }
 
         .btn {
@@ -537,7 +540,7 @@ main {
             border-radius: 5px;
             cursor: pointer;
             &:hover {
-                background-color: burlywood;
+                background-color: coral;
                 color: lightcyan;
             }
         }
