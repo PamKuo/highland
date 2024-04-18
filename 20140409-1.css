@@ -354,10 +354,13 @@ main .container .timeline-section .row .col-md-6 .mytext .h3 .little {
   font-weight: 800;
   font-size: 1.5rem;
   color: gray;
+  margin-left: 5px;
 }
 main .container .timeline-section .row .col-md-6 .mytext p {
   font-size: 1.25rem;
   line-height: 1.5rem;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 main .container .timeline-section .row .col-md-6 .mytext ul li {
   font-size: 1rem;
@@ -530,6 +533,15 @@ footer section.links a img {
   }
 }
 @media screen and (max-width: 700px) {
+  main section.backImage h3 {
+    font-size: 2rem;
+  }
+  main section.backImage button {
+    margin-bottom: 15px;
+  }
+  main section.second h2 {
+    font-size: 1.5rem;
+  }
   main section.second section.cards div.card div.image-container {
     width: 40vw;
     height: 40vw;
